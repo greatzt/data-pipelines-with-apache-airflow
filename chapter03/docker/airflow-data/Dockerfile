@@ -1,4 +1,4 @@
-ARG AIRFLOW_BASE_IMAGE="apache/airflow:2.0.0-python3.8"
+ARG AIRFLOW_BASE_IMAGE="apache/airflow:2.4.2-python3.10"
 FROM ${AIRFLOW_BASE_IMAGE}
 
 USER root

@@ -9,11 +9,11 @@ x-environment: &airflow_environment
   - AIRFLOW__CORE__STORE_SERIALIZED_DAGS=True
   - AIRFLOW__WEBSERVER__EXPOSE_CONFIG=True
   - AIRFLOW__WEBSERVER__RBAC=False
-x-airflow-image: &airflow_image apache/airflow:2.0.0-python3.8
+x-airflow-image: &airflow_image apache/airflow:2.4.2-python3.10
 # ====================================== /AIRFLOW ENVIRONMENT VARIABLES ======================================
 services:
   postgres:
-    image: postgres:12-alpine
+    image: postgres:14-alpine
     environment:
       - POSTGRES_USER=airflow
       - POSTGRES_PASSWORD=airflow
